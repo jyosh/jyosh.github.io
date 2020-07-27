@@ -2,14 +2,13 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>3.5 Based AR.js demo</title>
+    <title>din Based AR.js demo</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
-      window.onload = () => {                       navigator.geolocation.getCurrentPosition((position) => {
-        alert(position.coords.latitude);
-        alert(position.coords.longitude);
+      window.onload = () => {                       
+        navigator.geolocation.getCurrentPosition((position) => {
         document.querySelector('a-entity').setAttribute('gps-entity-place', `latitude: ${position.coords.latitude}; longitude: ${position.coords.longitude};`)
       });
      }
@@ -27,7 +26,7 @@
         scale="0.25 0.25 0.25"
         position="0 3 3"
       -->
-              <a-box scale="30 30 30" position="0 0 300"></a-box>
+              <a-box scale="30 30 30" position="0 0 2"></a-box>
       
        <a-text
         value="This content will always face you."
@@ -36,11 +35,10 @@
         gps-entity-place="latitude: 12.98; longitude: 77.56;"
       ></a-text>
       
-      <!--a-entity
-        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        scale="0.1 0.1 0.1"
-                position="0 -1 0"
-      -->
+      <a-entity
+        gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf" 
+              gps-entity-place="latitude: 12.98; longitude: 77.56;"
+                >
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
