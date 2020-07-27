@@ -47,11 +47,16 @@
         scale="50 50 50"
         gps-entity-place="latitude: 12.98; longitude: 77.56;"
       ></a-text>
+
+      <a-entity id="dino" position="-1 0 -3" scale="0.5 0.5 0.5" gps-entity-place="latitude: 12.98; longitude: 77.56;">
+        <a-entity position="0 2.15 0" rotation="0 55 0"
+                  gltf-model="https://cdn.glitch.com/324a5290-5aa7-4efc-92d6-ae0736433b12%2Fspinosaurus.glb"></a-entity>
+      </a-entity>  
       
-      <a-entity
+      <!--a-entity
         gltf-model="https://cdn.glitch.com/324a5290-5aa7-4efc-92d6-ae0736433b12%2Fspinosaurus.glb"        
               gps-entity-place="latitude: 12.98; longitude: 77.56;"
-              position="0 2.15 0" rotation="0 55 0">
+              position="0 2.15 0" rotation="0 55 0"-->
       <a-camera gps-camera rotation-reader position="0 1.2 5"> </a-camera>
     </a-scene>
   </body>
